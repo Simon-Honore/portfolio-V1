@@ -9,7 +9,7 @@ body {
 
 #__next,
 #app {
-	height: 100vh;
+	height: 100%;
 }
 
 a {

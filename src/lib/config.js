@@ -2,6 +2,8 @@ import { Gamepad2, Github, Linkedin } from 'lucide-react';
 
 export const FULL_NAME = 'Simon Honoré';
 
+export const GITHUB_USERNAME = 'Simon-Honore';
+
 export const NAV_LINKS = [
 	{
 		url: '/',
