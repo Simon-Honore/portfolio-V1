@@ -3,7 +3,7 @@ import '@/src/styles/theme.css';
 
 export default function App({ Component, pageProps }) {
 	return (
-		<div id='app' className='dark'>
+		<div id='app' className=''>
 			<div className='m-auto h-full max-w-7xl px-4'>
 				<Component {...pageProps} />
 			</div>
