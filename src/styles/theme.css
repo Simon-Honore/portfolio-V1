@@ -15,7 +15,7 @@
 
 /* dark mode */
 #app.dark {
-	--color-background: 1 6 50;
+	--color-background: 1 0 38;
 	--color-paper: 4 2 85;
 	--color-text-primary: 255 255 255;
 	--color-text-secondary: 217 217 242;
@@ -23,7 +23,8 @@
 	--color-primary: 159 94 28;
 	--color-secondary: 106 27 209;
 }
-theme #app {
+
+#app {
 	@apply bg-background text-skin-primary;
 }
 

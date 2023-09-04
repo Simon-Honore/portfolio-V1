@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
-		'./components/**/*.{js,ts,jsx,tsx,mdx}',
-		'./app/**/*.{js,ts,jsx,tsx,mdx}',
-	],
-	darkMode: 'class',
+	content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+	darkMode: ['class', '[data-mode="dark"]'],
 	theme: {
 		extend: {
+			gridTemplateColumns: {
+				'auto-fill-200-300': 'repeat(auto-fill, minmax(200px, 1fr))',
+			},
 			textColor: {
 				skin: {
 					primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
