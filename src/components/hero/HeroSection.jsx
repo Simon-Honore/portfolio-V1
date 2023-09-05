@@ -1,5 +1,6 @@
 import { FULL_NAME } from '@/src/lib/config';
 import Image from 'next/image';
+import { ContactLink } from '../atom/ContactLink';
 
 // TODO - changer le texte
 
@@ -25,6 +26,8 @@ export const HeroSection = () => {
 					internet, very happy to see your here, place holder please fill
 					something here please fill something here.
 				</p>
+
+				<ContactLink />
 			</div>
 		</div>
 	);
