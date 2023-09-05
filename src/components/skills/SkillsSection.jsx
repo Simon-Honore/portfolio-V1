@@ -1,6 +1,7 @@
 import { SKILLS } from '@/src/lib/config';
 import { SectionWrapper } from '../atom/SectionWrapper';
 import { SkillItem } from './SkillItem';
+import { IoConstructOutline } from 'react-icons/io5';
 
 const SkillsList = () => {
 	return (
@@ -17,7 +18,7 @@ const SkillsList = () => {
 
 export const SkillsSection = () => {
 	return (
-		<SectionWrapper title='Skills'>
+		<SectionWrapper title='Skills' icon={<IoConstructOutline />}>
 			<SkillsList />
 		</SectionWrapper>
 	);

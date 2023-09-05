@@ -10,10 +10,12 @@ import {
 	SiExpress,
 	SiPostgresql,
 	SiMongodb,
-	SiLinkedin,
-	SiGithub,
 } from 'react-icons/si';
-import { IoGameController } from 'react-icons/io5';
+import {
+	IoCodeSlashSharp,
+	IoDocumentTextOutline,
+	IoGameController,
+} from 'react-icons/io5';
 
 export const FULL_NAME = 'Simon Honoré';
 
@@ -21,19 +23,24 @@ export const GITHUB_USERNAME = 'Simon-Honore';
 
 export const NAV_LINKS = [
 	{
+		url: '/#Skills',
+		name: 'Skills',
+		icon: <IoCodeSlashSharp />,
+	},
+	{
+		url: '/#Projects',
+		name: 'Projects',
+		icon: <IoCodeSlashSharp />,
+	},
+	{
+		url: '/Simon_Honore.pdf',
+		name: 'My Resume',
+		icon: <IoDocumentTextOutline />,
+	},
+	{
 		url: '/',
 		name: 'Amusez-vous',
 		icon: <IoGameController />,
-	},
-	{
-		url: 'https://www.linkedin.com/in/simon-honore/',
-		name: 'Linkedin',
-		icon: <SiLinkedin />,
-	},
-	{
-		url: 'https://github.com/Simon-Honore',
-		name: 'Github',
-		icon: <SiGithub />,
 	},
 ];
 

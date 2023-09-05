@@ -4,6 +4,7 @@ import { getListPinnedRepositoriesURL } from '@/src/lib/api-url';
 import { GITHUB_USERNAME } from '@/src/lib/config';
 import { SpinnerDotted } from 'spinners-react';
 import { Project } from './Project';
+import { IoCodeSlashSharp } from 'react-icons/io5';
 
 const ProjectsCards = () => {
 	const {
@@ -36,7 +37,7 @@ const ProjectsCards = () => {
 
 export const ProjectsSection = () => {
 	return (
-		<SectionWrapper title='Projects'>
+		<SectionWrapper title='Projects' icon={<IoCodeSlashSharp />} id='projects'>
 			<ProjectsCards />
 		</SectionWrapper>
 	);
