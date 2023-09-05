@@ -1,4 +1,5 @@
 import { FULL_NAME } from '../lib/config';
+import { ToggleThemeButton } from './ToggleThemeButton';
 import { NavLink } from './atom/NavLinks';
 
 export const Header = () => {
@@ -8,6 +9,7 @@ export const Header = () => {
 				{FULL_NAME}
 			</span>
 			<NavLink />
+			<ToggleThemeButton />
 		</header>
 	);
 };
