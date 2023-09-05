@@ -4,7 +4,7 @@ import { SkillsSection } from './skills/SkillsSection';
 
 export const Main = () => {
 	return (
-		<main className='flex-grow flex flex-col gap-20'>
+		<main className='flex-grow flex flex-col gap-40'>
 			<HeroSection />
 			<SkillsSection />
 			<ProjectsSection />

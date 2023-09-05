@@ -12,7 +12,7 @@ export const HeroSection = () => {
 				height={300}
 				src='/images/avatar.png'
 				alt='avatar'
-				className=' rounded-3xl shadow-lg'
+				className=' rounded-3xl shadow-lg shadow-gray-600'
 			/>
 			<div className='md:absolute md:left-0 md:mr-[140px] md:mt-3'>
 				<h1 className='text-6xl dark:drop-shadow-[0_0px_20px_rgba(0,0,0,0.5)] md:text-8xl'>
