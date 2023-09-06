@@ -1,3 +1,15 @@
+import { MemorySection } from '@/src/components/memory/MemorySection';
+import Head from 'next/head';
+
 export default function HaveFun() {
-	return <h1>Have Fun !</h1>;
+	return (
+		<>
+			<Head>
+				<title>Portfolio Simon Honoré</title>
+			</Head>
+			<div className='flex flex-col gap-40'>
+				<MemorySection />
+			</div>
+		</>
+	);
 }
