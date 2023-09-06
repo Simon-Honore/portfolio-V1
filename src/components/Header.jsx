@@ -27,7 +27,7 @@ export const Header = () => {
 				</div>
 				<div className='mobile:flex hidden gap-5'>
 					<ToggleThemeButton />
-					<BurgerMenu toggle={toggleMenu} />
+					<BurgerMenu toggle={toggleMenu} isMenuOpen={isMenuOpen} />
 				</div>
 			</div>
 

@@ -1,21 +1,35 @@
-export const BurgerMenu = ({ toggle }) => {
+import clsx from 'clsx';
+
+export const BurgerMenu = ({ toggle, isMenuOpen }) => {
 	return (
 		<>
 			<div
-				className='w-10 h-10 flex flex-col justify-around p-1'
+				className='w-9 h-10 flex flex-col justify-around overflow-hidden'
 				onClick={toggle}
 			>
-				<span className='w-full bg-primary h-1'></span>
-				<span className='w-full bg-primary h-1'></span>
-				<span className='w-full bg-primary h-1'></span>
+				<span
+					className={clsx(
+						'w-full bg-primary h-1 transition-all duration-700 ease-in-out',
+						{
+							'rotate-45 origin-bottom-left': isMenuOpen,
+						},
+					)}
+				></span>
+				<span
+					className={clsx(
+						'w-full bg-primary h-1 transition-all duration-1000 ease-in-out',
+						{ 'translate-x-10 ': isMenuOpen },
+					)}
+				></span>
+				<span
+					className={clsx(
+						'w-full bg-primary h-1 transition-all duration-700 ease-in-out',
+						{
+							'rotate-[-45deg] origin-top-left': isMenuOpen,
+						},
+					)}
+				></span>
 			</div>
-
-			{/* <div className='absolute left-0 z-50 w-screen'>
-				<p>item</p>
-				<p>item</p>
-				<p>item</p>
-				<p>item</p>
-			</div> */}
 		</>
 	);
 };
