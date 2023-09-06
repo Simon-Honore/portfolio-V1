@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import { SiGithub, SiLinkedin, SiMaildotru } from 'react-icons/si';
 
+/**
+ * Link Next component styled like a button
+ *
+ * @param {string} url href url
+ * @param children Children of the link
+ * @returns {JSX.Element}
+ */
 const LinkButton = ({ url, children }) => {
 	return (
 		<Link
@@ -12,6 +19,10 @@ const LinkButton = ({ url, children }) => {
 	);
 };
 
+/**
+ * Links to my contacts
+ * @returns {JSX.Element}
+ */
 export const ContactLink = () => {
 	return (
 		<div className='flex gap-4 py-2'>

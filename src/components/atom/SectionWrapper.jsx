@@ -1,3 +1,11 @@
+/**
+ * Wrapping the different section of the site in the same design
+ *
+ * @param {string} title Section title
+ * @param {JSX.Element} icon Title icon
+ * @param children Children of the section
+ * @returns {JSX.Element}
+ */
 export const SectionWrapper = ({ children, title, icon }) => {
 	return (
 		<div className='flex flex-col items-center gap-14'>

@@ -4,6 +4,7 @@ import '@/src/styles/globals.css';
 import '@/src/styles/theme.css';
 import clsx from 'clsx';
 
+// HOC for aplly the theme
 const AppWithTheme = ({ children }) => {
 	const { isDark } = useThemeContext();
 

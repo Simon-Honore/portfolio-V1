@@ -1,3 +1,10 @@
+/**
+ * Simple button
+ *
+ * @param props All props that u button can take
+ * @param children Children of the button
+ * @returns {JSX.Element}
+ */
 export const Button = ({ children, ...props }) => {
 	return (
 		<button

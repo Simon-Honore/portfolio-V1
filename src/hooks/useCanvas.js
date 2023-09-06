@@ -7,7 +7,6 @@ const DEFAULT_SIZE = 4;
 
 export const useCanvas = () => {
 	const canvas = useRef(null);
-	console.log('canvas >> ', canvas);
 
 	const [colorValue, setColorValue] = useState(DEFAULT_COLOR);
 	const [sizeValue, setSizeValue] = useState(DEFAULT_SIZE);
