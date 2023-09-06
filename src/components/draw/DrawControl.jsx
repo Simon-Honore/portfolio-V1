@@ -1,4 +1,3 @@
-// Draw exercise
 export const DrawControl = ({
 	colorValue,
 	onChangeColor,

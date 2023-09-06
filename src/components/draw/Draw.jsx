@@ -6,7 +6,6 @@ import { DrawControl } from './DrawControl';
 const DEFAULT_COLOR = '#000000';
 const DEFAULT_SIZE = 4;
 
-// Draw exercise
 export const Draw = () => {
 	const canvas = useRef(null);
 	const [colorValue, setColorValue] = useState(DEFAULT_COLOR);
@@ -14,7 +13,6 @@ export const Draw = () => {
 
 	const save = () => {
 		const data = canvas.current.toDataURL();
-		console.log('data >> ', data);
 		const link = document.createElement('a');
 		link.download = 'image.png';
 		link.href = data;

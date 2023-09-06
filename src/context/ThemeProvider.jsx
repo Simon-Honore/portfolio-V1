@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
-// Dark mode exercise
 const ThemeContext = createContext({ theme: 'light' });
 
 const LOCAL_STORAGE_THEME_COLOR_KEY = 'ThemeColor';
