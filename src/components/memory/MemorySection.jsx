@@ -1,3 +1,4 @@
+import { Button } from '../atom/Button';
 import { SectionWrapper } from '../atom/SectionWrapper';
 import { MemoryBoard } from './MemoryBoard';
 import { MemoryContextProvider, useMemoryContext } from './MemoryProvider';
@@ -21,14 +22,7 @@ export const MemorySection = () => {
 const ButtonReset = () => {
 	const { resetBoard } = useMemoryContext();
 
-	return (
-		<button
-			className='inline-flex items-center justify-center rounded-md text-sm font-medium  bg-primary text-white gap-1 hover:scale-105 h-10 px-4 py-2'
-			onClick={resetBoard}
-		>
-			Reset go here
-		</button>
-	);
+	return <Button onClick={resetBoard}>Reset go here</Button>;
 };
 
 const MemoryScore = () => {
