@@ -1,6 +1,5 @@
 import { getCoordinates } from '../lib/canvas';
-
-const { useRef, useState, useEffect } = require('react');
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 const DEFAULT_COLOR = '#000000';
 const DEFAULT_SIZE = 4;
@@ -14,11 +13,11 @@ export const useCanvas = () => {
 	const isDrawing = useRef(false);
 	const lastCoordinate = useRef(null);
 
-	const startDrawing = (event) => {
+	const startDrawing = useCallback((event) => {
 		isDrawing.current = true;
 		const coordinate = getCoordinates(event, canvas.current);
 		lastCoordinate.current = coordinate;
-	};
+	}, []);
 
 	const stopDrawing = () => {
 		if (isDrawing?.current === false) {
@@ -27,23 +26,26 @@ export const useCanvas = () => {
 		isDrawing.current = false;
 	};
 
-	const draw = (event) => {
-		if (isDrawing.current === true && canvas.current?.getContext) {
-			const ctx = canvas.current.getContext('2d');
-			const newCoordinate = getCoordinates(event, canvas.current);
+	const draw = useCallback(
+		(event) => {
+			if (isDrawing.current === true && canvas.current?.getContext) {
+				const ctx = canvas.current.getContext('2d');
+				const newCoordinate = getCoordinates(event, canvas.current);
 
-			ctx.strokeStyle = colorValue;
-			ctx.lineWidth = sizeValue;
-			ctx.lineCap = 'round';
+				ctx.strokeStyle = colorValue;
+				ctx.lineWidth = sizeValue;
+				ctx.lineCap = 'round';
 
-			ctx.beginPath();
-			ctx.moveTo(lastCoordinate.current.x, lastCoordinate.current.y);
-			ctx.lineTo(newCoordinate.x, newCoordinate.y);
-			ctx.stroke();
+				ctx.beginPath();
+				ctx.moveTo(lastCoordinate.current.x, lastCoordinate.current.y);
+				ctx.lineTo(newCoordinate.x, newCoordinate.y);
+				ctx.stroke();
 
-			lastCoordinate.current = newCoordinate;
-		}
-	};
+				lastCoordinate.current = newCoordinate;
+			}
+		},
+		[colorValue, sizeValue],
+	);
 
 	const changeColor = (newColor) => {
 		setColorValue(newColor);
@@ -53,9 +55,11 @@ export const useCanvas = () => {
 
 	useEffect(() => {
 		window.addEventListener('mouseup', stopDrawing);
+		window.addEventListener('touchend', stopDrawing);
 
 		return () => {
 			window.removeEventListener('mouseup', stopDrawing);
+			window.removeEventListener('touchend', stopDrawing);
 		};
 	}, []);
 
@@ -73,6 +77,45 @@ export const useCanvas = () => {
 			ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
 		}
 	};
+
+	// ====== To use this canvas on a touch screen =======
+	const startDrawingMobile = useCallback(
+		(e) => {
+			e.preventDefault();
+			const touch = e.touches[0];
+			const coordinates = {
+				clientX: touch.clientX,
+				clientY: touch.clientY,
+			};
+			startDrawing(coordinates);
+		},
+		[startDrawing],
+	);
+
+	const drawingMobile = useCallback(
+		(e) => {
+			e.preventDefault();
+			const touch = e.touches[0];
+			const coordinates = {
+				clientX: touch.clientX,
+				clientY: touch.clientY,
+			};
+			draw(coordinates);
+		},
+		[draw],
+	);
+
+	useEffect(() => {
+		const canvas = document.getElementById('canvas');
+		canvas.addEventListener('touchstart', startDrawingMobile);
+		canvas.addEventListener('touchmove', drawingMobile);
+
+		return () => {
+			canvas.removeEventListener('touchstart', startDrawingMobile);
+			canvas.removeEventListener('touchmove', drawingMobile);
+		};
+	}, [drawingMobile, startDrawingMobile]);
+	// ===========================
 
 	return {
 		canvas,

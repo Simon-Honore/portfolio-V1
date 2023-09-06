@@ -1,3 +1,4 @@
+// Canvas parameters
 export const DrawControl = ({
 	colorValue,
 	onChangeColor,
