@@ -20,6 +20,9 @@ module.exports = {
 				primary: 'rgb(var(--color-primary) / <alpha-value>)',
 				secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
 			},
+			screens: {
+				mobile: { max: '480px' },
+			},
 		},
 	},
 	plugins: [],

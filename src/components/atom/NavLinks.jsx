@@ -1,14 +1,15 @@
 import { NAV_LINKS } from '@/src/lib/config';
 import Link from 'next/link';
 
-export const NavLink = () => {
+export const NavLink = ({ className, classLink, toggle }) => {
 	return (
-		<nav className='flex ml-auto gap-4'>
+		<nav className={className}>
 			{NAV_LINKS.map(({ url, name, icon }) => (
 				<Link
 					key={name}
 					href={url}
-					className='flex items-center gap-1 text-base'
+					className={classLink}
+					onClick={() => toggle?.()}
 				>
 					{icon} <span>{name}</span>
 				</Link>
