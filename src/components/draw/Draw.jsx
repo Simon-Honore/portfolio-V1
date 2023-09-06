@@ -12,15 +12,17 @@ export const Draw = () => {
 		reset,
 		changeColor,
 		changeSize,
+		startDrawing,
+		draw,
 	} = useCanvas();
 
 	return (
 		<div className='flex flex-col gap-8'>
-			<DrawCanvas canvas={canvas} color={colorValue} size={sizeValue} />
+			<DrawCanvas canvas={canvas} startDrawing={startDrawing} draw={draw} />
 			<DrawControl
 				colorValue={colorValue}
-				onChangeColor={(e) => changeColor(e.target.value)}
 				sizeValue={sizeValue}
+				onChangeColor={(e) => changeColor(e.target.value)}
 				onChangeSize={(e) => changeSize(e.target.value)}
 			/>
 			<div className='m-auto flex gap-4'>
