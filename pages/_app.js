@@ -1,3 +1,4 @@
+import { Layout } from '@/src/components/Layout';
 import { ThemeProvider, useThemeContext } from '@/src/context/ThemeProvider';
 import '@/src/styles/globals.css';
 import '@/src/styles/theme.css';
@@ -17,9 +18,9 @@ export default function App({ Component, pageProps }) {
 	return (
 		<ThemeProvider>
 			<AppWithTheme>
-				<div className='m-auto h-full max-w-7xl px-4'>
+				<Layout>
 					<Component {...pageProps} />
-				</div>
+				</Layout>
 			</AppWithTheme>
 		</ThemeProvider>
 	);

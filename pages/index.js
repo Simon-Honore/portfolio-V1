@@ -1,6 +1,6 @@
-import { Footer } from '@/src/components/Footer';
-import { Header } from '@/src/components/Header';
-import { Main } from '@/src/components/Main';
+import { HeroSection } from '@/src/components/hero/HeroSection';
+import { ProjectsSection } from '@/src/components/project/ProjectsSection';
+import { SkillsSection } from '@/src/components/skills/SkillsSection';
 import Head from 'next/head';
 
 export default function Home() {
@@ -9,10 +9,10 @@ export default function Home() {
 			<Head>
 				<title>Portfolio Simon Honoré</title>
 			</Head>
-			<div className='flex flex-col gap-8 h-full'>
-				<Header />
-				<Main />
-				<Footer />
+			<div className='flex flex-col gap-40'>
+				<HeroSection />
+				<SkillsSection />
+				<ProjectsSection />
 			</div>
 		</>
 	);

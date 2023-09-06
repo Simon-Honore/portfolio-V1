@@ -38,7 +38,7 @@ export const NAV_LINKS = [
 		icon: <IoDocumentTextOutline />,
 	},
 	{
-		url: '/',
+		url: '/havefun',
 		name: 'Have fun!',
 		icon: <IoGameController />,
 	},
