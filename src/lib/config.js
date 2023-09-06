@@ -39,7 +39,7 @@ export const NAV_LINKS = [
 	},
 	{
 		url: '/',
-		name: 'Amusez-vous',
+		name: 'Have fun!',
 		icon: <IoGameController />,
 	},
 ];
