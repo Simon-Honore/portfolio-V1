@@ -1,6 +1,14 @@
 import { DrawSection } from '@/src/components/draw/DrawSection';
-import { MemorySection } from '@/src/components/memory/MemorySection';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
+// dynamic import Memory Section
+const DynamicMemorySection = dynamic(
+	() => import('../../src/components/memory'),
+	{
+		ssr: false,
+	},
+);
 
 export default function HaveFun() {
 	return (
@@ -9,7 +17,7 @@ export default function HaveFun() {
 				<title>Portfolio Simon Honoré</title>
 			</Head>
 			<div className='flex flex-col gap-40'>
-				<MemorySection />
+				<DynamicMemorySection />
 				<DrawSection />
 			</div>
 		</>
