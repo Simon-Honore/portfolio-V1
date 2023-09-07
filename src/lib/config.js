@@ -66,19 +66,19 @@ export const SKILLS = [
 		tag: 'Front-end',
 		list: [
 			{
-				icon: <SiJavascript />,
+				icon: <SiJavascript style={{ fill: 'url(#gradient)' }} />,
 				name: 'Javascript',
 			},
 			{
-				icon: <SiTypescript />,
+				icon: <SiTypescript style={{ fill: 'url(#gradient)' }} />,
 				name: 'Typescript',
 			},
 			{
-				icon: <SiReact />,
+				icon: <SiReact style={{ fill: 'url(#gradient)' }} />,
 				name: 'React',
 			},
 			{
-				icon: <SiNextdotjs />,
+				icon: <SiNextdotjs style={{ fill: 'url(#gradient)' }} />,
 				name: 'Next.js',
 			},
 		],

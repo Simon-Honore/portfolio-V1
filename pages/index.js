@@ -9,7 +9,7 @@ export default function Home() {
 			<Head>
 				<title>Portfolio Simon Honoré</title>
 			</Head>
-			<div className='flex flex-col gap-40'>
+			<div className='flex flex-col gap-28'>
 				<HeroSection />
 				<SkillsSection />
 				<ProjectsSection />

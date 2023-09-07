@@ -16,7 +16,7 @@ export default function HaveFun() {
 			<Head>
 				<title>Have fun!</title>
 			</Head>
-			<div className='flex flex-col gap-40'>
+			<div className='flex flex-col gap-28'>
 				<DynamicMemorySection />
 				<DrawSection />
 			</div>

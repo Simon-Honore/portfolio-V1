@@ -25,7 +25,7 @@ const LinkButton = ({ url, children }) => {
  */
 export const ContactLink = () => {
 	return (
-		<div className='flex gap-4 py-2'>
+		<div className='flex gap-4 py-2 justify-center'>
 			<LinkButton url='https://www.linkedin.com/in/simon-honore/'>
 				<SiLinkedin />
 				<span>LinkedIn</span>
