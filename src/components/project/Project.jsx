@@ -8,7 +8,7 @@ export const Project = ({
 	url,
 }) => {
 	return (
-		<div className='flex flex-col gap-4 p-4 bg-paper w-60 rounded-xl transition-transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50 md:w-80 md:p-8'>
+		<div className='flex flex-col shadow-sm shadow-black dark:shadow-white gap-4 p-4 bg-paper w-60 rounded-xl transition-transform hover:scale-105 hover:shadow-md focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50 md:w-80 md:p-8'>
 			<p className='w-full text-right'>⭐ {stargazerCount}</p>
 			<Link href={url}>
 				<h3 className='text-2xl font-semibold'>{name}</h3>
