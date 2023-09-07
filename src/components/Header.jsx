@@ -31,12 +31,7 @@ export const Header = () => {
 				</div>
 			</div>
 
-			<div
-				className={clsx(
-					{ hidden: !isMenuOpen },
-					'bg-background brightness-[1.5] rounded-t-lg ',
-				)}
-			>
+			<div className={clsx({ hidden: !isMenuOpen }, 'bg-paper rounded-t-lg ')}>
 				<NavLink
 					toggle={toggleMenu}
 					className='flex flex-col items-center '
