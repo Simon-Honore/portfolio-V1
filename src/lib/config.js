@@ -33,7 +33,7 @@ export const NAV_LINKS = [
 		icon: <IoCodeSlashSharp />,
 	},
 	{
-		url: '/Simon_Honore.pdf',
+		url: '/SImon_Honore.pdf',
 		name: 'My Resume',
 		icon: <IoDocumentTextOutline />,
 		config: { download: true, target: '_blank' },
