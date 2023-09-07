@@ -18,10 +18,10 @@ export const Header = () => {
 				>
 					{FULL_NAME}
 				</Link>
-				<div className='flex tablet:hidden'>
+				<div className='flex gap-4 tablet:hidden'>
 					<NavLink
 						className='flex gap-4 '
-						classLink='flex items-center gap-1 text-base'
+						classLink='flex items-center gap-1 font-medium'
 					/>
 					<ToggleThemeButton />
 				</div>
