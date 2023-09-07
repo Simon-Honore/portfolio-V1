@@ -6,6 +6,7 @@ import { SpinnerDotted } from 'spinners-react';
 import { Project } from './Project';
 import { IoCodeSlashSharp } from 'react-icons/io5';
 
+// List of my pinned repositories on Github
 const ProjectsCards = () => {
 	const {
 		data: repos,
@@ -37,7 +38,7 @@ const ProjectsCards = () => {
 
 export const ProjectsSection = () => {
 	return (
-		<SectionWrapper title='Projects' icon={<IoCodeSlashSharp />} id='projects'>
+		<SectionWrapper title='Projects' icon={<IoCodeSlashSharp />}>
 			<ProjectsCards />
 		</SectionWrapper>
 	);

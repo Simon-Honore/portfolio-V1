@@ -22,6 +22,7 @@ export const HeroSection = () => {
 						{FULL_NAME}
 					</span>
 				</h1>
+
 				<p className=' max-w-xl text-xl drop-shadow-[0_0px_2px_rgba(255,255,255,0.5)] dark:drop-shadow-[0_0px_2px_rgba(0,0,0,1)]'>
 					<b>Apprenti React.</b> I’m a software developer that make thing on
 					internet, very happy to see your here, place holder please fill

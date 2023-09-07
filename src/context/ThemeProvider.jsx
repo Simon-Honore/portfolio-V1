@@ -4,12 +4,20 @@ const ThemeContext = createContext({ theme: 'light' });
 
 const LOCAL_STORAGE_THEME_COLOR_KEY = 'ThemeColor';
 
+export const useThemeContext = () => {
+	const context = useContext(ThemeContext);
+
+	return context;
+};
+
 export const ThemeProvider = ({ children }) => {
 	const [theme, setTheme] = useState('light');
 
 	const isDark = theme === 'dark';
 	const isLight = theme === 'light';
 
+	// Set the theme according to prefers color scheme
+	// unless the theme set on the site
 	useEffect(() => {
 		const themeLocalStorage = localStorage.getItem(
 			LOCAL_STORAGE_THEME_COLOR_KEY,
@@ -37,6 +45,7 @@ export const ThemeProvider = ({ children }) => {
 		};
 	}, []);
 
+	// Toggle the theme and save it in the local storage
 	const toggleTheme = () => {
 		setTheme((curr) => {
 			const newTheme = curr === 'dark' ? 'light' : 'dark';
@@ -50,10 +59,4 @@ export const ThemeProvider = ({ children }) => {
 	return (
 		<ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>
 	);
-};
-
-export const useThemeContext = () => {
-	const context = useContext(ThemeContext);
-
-	return context;
 };

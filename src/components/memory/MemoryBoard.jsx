@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
 import { MemoryCard } from './MemoryCard';
 import { useMemoryContext } from './MemoryProvider';
 
 export const MemoryBoard = () => {
-	const { cards, onClickCard, resetBoard } = useMemoryContext();
+	const { cards, onClickCard } = useMemoryContext();
 
 	if (!cards) {
 		return <p>An error occurs, there is no board.</p>;
