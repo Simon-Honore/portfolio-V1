@@ -24,9 +24,11 @@ export const HeroSection = () => {
 				</h1>
 
 				<p className=' max-w-xl text-xl drop-shadow-[0_0px_2px_rgba(255,255,255,0.5)] dark:drop-shadow-[0_0px_2px_rgba(0,0,0,1)] mobile:py-4 mobile:text-justify'>
-					<b>Apprenti React.</b> I’m a software developer that make thing on
-					internet, very happy to see your here, place holder please fill
-					something here please fill something here.
+					<b>Front-end web developer</b> A pure product of retraining, I&apos;ve
+					completed my RNCP DWWM qualification. Specialising in React and open
+					to other technologies, I&apos;m always looking to improve. If
+					you&apos;re looking for a developer in the Vendée, Maine-et-Loire or
+					full-remote, contact me! 🚀
 				</p>
 
 				<ContactLink />
