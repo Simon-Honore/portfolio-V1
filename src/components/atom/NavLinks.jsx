@@ -12,12 +12,13 @@ import Link from 'next/link';
 export const NavLink = ({ className, classLink, toggle }) => {
 	return (
 		<nav className={className}>
-			{NAV_LINKS.map(({ url, name, icon }) => (
+			{NAV_LINKS.map(({ url, name, icon, config }) => (
 				<Link
 					key={name}
 					href={url}
 					className={classLink}
 					onClick={() => toggle?.()}
+					{...config}
 				>
 					{icon} <span>{name}</span>
 				</Link>
