@@ -4,7 +4,7 @@ import { ContactLink } from '../atom/ContactLink';
 
 export const HeroSection = () => {
 	return (
-		<div className='relative flex flex-col items-center gap-6 md:flex-row-reverse md:items-start md:mb-36 lg:mb-0'>
+		<div className='relative flex flex-col items-center gap-6 md:flex-row-reverse md:items-start md:mb-40 lg:mb-24'>
 			<Image
 				width={300}
 				height={300}
