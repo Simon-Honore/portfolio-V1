@@ -18,14 +18,14 @@ export const Header = () => {
 				>
 					{FULL_NAME}
 				</Link>
-				<div className='flex mobile:hidden'>
+				<div className='flex tablet:hidden'>
 					<NavLink
-						className='flex gap-4'
+						className='flex gap-4 '
 						classLink='flex items-center gap-1 text-base'
 					/>
 					<ToggleThemeButton />
 				</div>
-				<div className='mobile:flex hidden gap-5'>
+				<div className='tablet:flex hidden gap-5'>
 					<ToggleThemeButton />
 					<BurgerMenu toggle={toggleMenu} isMenuOpen={isMenuOpen} />
 				</div>
