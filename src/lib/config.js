@@ -36,7 +36,7 @@ export const NAV_LINKS = [
 		url: '/SImon_Honore.pdf',
 		name: 'My Resume',
 		icon: <IoDocumentTextOutline />,
-		config: { download: true, target: '_blank' },
+		config: { download: true },
 	},
 	{
 		url: '/havefun',
